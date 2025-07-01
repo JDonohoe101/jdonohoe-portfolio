@@ -3,9 +3,9 @@
 
 @theme{
   /* --color-mint-500: oklch(0.72 0.11 178); */
-  --white: #fdfdfdff;
-  --rose: #ff3276ff;
-  --night: #0f0f0fff;
+  --color-primary: #fdfdfdff;
+  --color-secondary: #ff3276ff;
+  --color-grey-text: rgb(84, 84, 84);
   --picton-blue: #00aaffff;
   --jonquil: #facd24ff;
   /* --font-manrope: "Manrope", sans-serif;  */
@@ -16,8 +16,8 @@
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-  background-color: #fdfdfdff;
-  color: rgb(84, 84, 84);
+  /* background-color: #fdfdfdff; */
+  /* color: rgb(84, 84, 84); */
   color-scheme: light dark;
 
 
@@ -34,7 +34,8 @@ a {
   text-decoration: inherit;
 }
 a:hover {
-  color: #00aaffff;
+  color: #ff3276ff;
+
 }
 
 body {

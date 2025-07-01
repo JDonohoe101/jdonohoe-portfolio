@@ -1,31 +1,47 @@
-import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { FaLinkedin, FaGithub} from "react-icons/fa";
+import { HiOutlineDocumentText } from 'react-icons/hi';
+import BoxSketch from "./BoxSketch"; // adjust path if needed
 
-export default function Hero({ title, subtitle, linkedin_link, github_link }) {
+
+export default function Hero({ title, subtitle, linkedin_link, github_link}) {
   return (
-    <div className="flex flex-col min-h-screen items-center justify-center px-4 text-center md:items-start md:text-left">
+    <div className="flex flex-col min-h-screen items-center justify-center px-6 text-center md:items-start md:text-left text-grey-text">
+      <BoxSketch />
+
       <div className="font-extrabold">
-        <h1 className="text-4xl sm:text-5xl md:text-6xl mb-4">{title}</h1>
+        <h1 className="text-secondary text-4xl sm:text-5xl md:text-6xl mb-1">{title}</h1>
         <h2 className="font-medium text-lg sm:text-xl md:text-2xl">
           {subtitle}
         </h2>
+        
 
-        <div className="flex space-x-6 mt-6 text-4xl text-gray-600 dark:text-gray-300 justify-center md:justify-start">          <a
+        <div className="flex space-x-6 mt-6 text-4xl justify-center md:justify-start">          
+        <a
             href={linkedin_link}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex p-1 hover:text-blue-600 transition"
+            className="inline-flex p-1 transition-transform transform hover:-translate-y-1 duration-200"
             aria-label="LinkedIn"
           >
-            <FaLinkedin />
+            <FaLinkedin className="text-grey-text hover:text-secondary transition-colors duration-200" />
           </a>
           <a
             href={github_link}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex p-1 hover:text-gray-900 dark:hover:text-white transition"
+            className="inline-flex p-1 transition-transform transform hover:-translate-y-1 duration-200"
             aria-label="GitHub"
           >
-            <FaGithub />
+            <FaGithub className="text-grey-text hover:text-secondary transition-colors duration-200" />
+          </a>
+          <a
+            href={""}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex p-1 transition-transform transform hover:-translate-y-1 duration-200"
+            aria-label="CV"
+          >
+            <HiOutlineDocumentText className="text-grey-text hover:text-secondary transition-colors duration-200" />
           </a>
         </div>
       </div>
