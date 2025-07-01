@@ -6,9 +6,10 @@
   --color-primary: #fdfdfdff;
   --color-secondary: #ff3276ff;
   --color-grey-text: rgb(84, 84, 84);
-  --picton-blue: #00aaffff;
-  --jonquil: #facd24ff;
+  --color-picton-blue: #00aaffff;
+  --color-jonquil: #facd24ff;
   /* --font-manrope: "Manrope", sans-serif;  */
+  --font-inter: 'Inter Variable', sans-serif;
 }
 
 
@@ -38,13 +39,13 @@ a:hover {
 
 }
 
-body {
+/* body {
   margin: 0;
   display: flex;
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-}
+} */
 
 h1 {
   font-size: 3.2em;
