@@ -5,6 +5,7 @@ import Navbar from './components/NavBar';
 import About from './components/About';
 import Projects from './components/Projects';
 import '@fontsource-variable/inter';
+import Contact from './components/Contact';
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
      />
      <About/>
      <Projects projects={projectList}/>
-
+     <Contact/>
     </>
   )
 }

@@ -89,7 +89,7 @@ const BoxSketch = () => {
             boxes[j].intersects(boxes[k])
           ) {
             const col = boxes[k].color;
-            const triangleCol = p5.color(col.levels[0], col.levels[1], col.levels[2], 5);
+            const triangleCol = p5.color(col.levels[0], col.levels[1], col.levels[2], 10);
             p5.fill(triangleCol);
             p5.noStroke();
             p5.triangle(
