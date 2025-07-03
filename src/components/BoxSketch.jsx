@@ -2,7 +2,7 @@ import React from "react";
 import Sketch from "react-p5";
 
 const BoxSketch = () => {
-  const boxPop = 15;//15
+  const boxPop = 10;//15
   let boxes = [];
 
   class Box {
@@ -54,7 +54,7 @@ const BoxSketch = () => {
         other.yPos + other.boxHeight
       );
     
-      if (d <= 300) {
+      if (d <= 200) {
     
         return true;
       }
