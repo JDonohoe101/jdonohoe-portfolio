@@ -20,9 +20,10 @@ const BoxSketch = () => {
     setRandomColor() {
       const { p5 } = this;
       const colors = [
-        p5.color(0, 153, 255),
+        // p5.color(0, 153, 255),
         p5.color(0, 225, 255),
         p5.color(31, 191, 255),
+        p5.color(255, 50, 118),
       ];
       return colors[Math.floor(Math.random() * colors.length)];
     }
@@ -32,7 +33,7 @@ const BoxSketch = () => {
       const c = p5.color(
         this.color.levels[0],
         this.color.levels[1],
-        this.color.levels[2]
+        this.color.levels[2], 0.5
       );
       p5.fill(c);
       p5.noStroke();
