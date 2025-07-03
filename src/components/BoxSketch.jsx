@@ -33,7 +33,7 @@ const BoxSketch = () => {
       const c = p5.color(
         this.color.levels[0],
         this.color.levels[1],
-        this.color.levels[2], 5
+        this.color.levels[2], 1
       );
       p5.fill(c);
       p5.noStroke();
