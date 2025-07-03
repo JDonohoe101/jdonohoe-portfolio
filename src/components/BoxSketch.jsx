@@ -2,7 +2,7 @@ import React from "react";
 import Sketch from "react-p5";
 
 const BoxSketch = () => {
-  const boxPop = 10;//15
+  const boxPop = 15;//15
   let boxes = [];
 
   class Box {
@@ -36,7 +36,7 @@ const BoxSketch = () => {
       );
       p5.fill(c);
       p5.noStroke();
-      p5.rect(this.xPos, this.yPos, this.boxWidth, this.boxHeight);
+      p5.ellipse(this.xPos, this.yPos, this.boxWidth, this.boxHeight);
     }
 
     update() {

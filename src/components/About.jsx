@@ -30,9 +30,9 @@ export default function About() {
   
             {/* Right (photo) */}
             <div className="w-full lg:w-1/2 flex justify-center">
-              <div className="w-64 h-64 rounded-full overflow-hidden shadow-lg ring-4 ring-picton-blue transition-transform hover:scale-105 duration-300">
+              <div className="w-100 h-100 rounded-full overflow-hidden shadow-lg transition-transform hover:scale-105 duration-300">
                 <img
-                  src="src/assets/me.jpg"
+                  src="/me.jpg"
                   alt="Me"
                   className="w-full h-full object-cover"
                 />
