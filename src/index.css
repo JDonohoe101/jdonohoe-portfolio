@@ -34,10 +34,10 @@ a {
   color: #0f0f0fff;
   text-decoration: inherit;
 }
-a:hover {
+/* a:hover {
   color: #ff3276ff;
 
-}
+} */
 
 /* body {
   margin: 0;
