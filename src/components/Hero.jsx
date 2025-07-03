@@ -5,7 +5,7 @@ import BoxSketch from "./BoxSketch"; // adjust path if needed
 
 export default function Hero({ title, subtitle, linkedin_link, github_link}) {
   return (
-    <div className="flex flex-col min-h-screen items-center justify-center px-24 text-center md:items-start md:text-left text-grey-text">
+    <div className="pt-16 flex flex-col min-h-screen items-center justify-center px-24 text-center md:items-start md:text-left text-grey-text">
       <BoxSketch />
 
       <div className="font-inter">
