@@ -6,7 +6,7 @@ export default function Projects({ projects }) {
         className="max-w-7xl mx-auto px-6 py-12 font-inter"
       >
         <h2 className="text-4xl text-secondary font-bold mb-8 text-center">PROJECTS</h2>
-  
+        <a>Projects can be viewed upon request</a>
         <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           {projects.map((project) => (
             <div
@@ -28,14 +28,14 @@ export default function Projects({ projects }) {
                 ))}
               </div>
   
-              <a
+              {/* <a
                 href={project.url}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-secondary hover:underline"
               >
                 View Project
-              </a>
+              </a> */}
             </div>
           ))}
         </div>

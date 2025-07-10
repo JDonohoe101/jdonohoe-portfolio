@@ -34,7 +34,7 @@ export default function Hero({ title, subtitle, linkedin_link, github_link}) {
           >
             <FaGithub className="text-grey-text hover:text-secondary transition-colors duration-200" />
           </a>
-          <a
+          {/* <a
             href={""}
             target="_blank"
             rel="noopener noreferrer"
@@ -42,7 +42,7 @@ export default function Hero({ title, subtitle, linkedin_link, github_link}) {
             aria-label="CV"
           >
             <HiOutlineDocumentText className="text-grey-text hover:text-secondary transition-colors duration-200" />
-          </a>
+          </a> */}
         </div>
       </div>
     </div>

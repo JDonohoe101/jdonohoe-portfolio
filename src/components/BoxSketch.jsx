@@ -2,7 +2,7 @@ import React from "react";
 import Sketch from "react-p5";
 
 const BoxSketch = () => {
-  const boxPop = 15;//15
+  const boxPop = 10;//15
   let boxes = [];
 
   class Box {
@@ -33,7 +33,7 @@ const BoxSketch = () => {
       const c = p5.color(
         this.color.levels[0],
         this.color.levels[1],
-        this.color.levels[2], 1
+        this.color.levels[2]
       );
       p5.fill(c);
       p5.noStroke();
@@ -55,7 +55,7 @@ const BoxSketch = () => {
         other.yPos + other.boxHeight
       );
     
-      if (d <= 200) {
+      if (d <= 350) {
     
         return true;
       }
@@ -90,7 +90,7 @@ const BoxSketch = () => {
             boxes[j].intersects(boxes[k])
           ) {
             const col = boxes[k].color;
-            const triangleCol = p5.color(col.levels[0], col.levels[1], col.levels[2], 2);
+            const triangleCol = p5.color(col.levels[0], col.levels[1], col.levels[2], 5);
             p5.fill(triangleCol);
             p5.noStroke();
             p5.triangle(

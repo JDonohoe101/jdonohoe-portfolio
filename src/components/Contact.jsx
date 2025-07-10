@@ -1,4 +1,33 @@
+import { useEffect, useRef } from "react";
+import emailjs from "@emailjs/browser";
+
 export default function Contact() {
+    const formRef = useRef();
+
+  useEffect(() => {
+    // Initialise EmailJS with your public key
+    emailjs.init({
+      publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY, // Replace with your actual public key
+    });
+  }, []);
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(import.meta.env.VITE_EMAILJS_SERVICE_ID, import.meta.env.VITE_EMAILJS_TEMPLATE_ID, formRef.current)
+      .then(
+        () => {
+          alert("Message sent successfully!");
+          formRef.current.reset();
+        },
+        (error) => {
+          console.error("Failed to send:", error);
+          alert("Failed to send message. Please try again.");
+        }
+      );
+  };
+
     return (
         <div className="font-inter">
             <h2 className="text-4xl font-bold mb-8 mt-24 text-secondary text-center">CONTACT ME</h2>
@@ -11,13 +40,8 @@ export default function Contact() {
         className="w-full py-6 px-6 bg-white/10 backdrop-blur-sm rounded-lg shadow-lg max-w-3xl mx-auto">
         
   
-        <form
-          onSubmit={(e) => {
-            e.preventDefault();
-            alert("Thank you for reaching out! I'll get back to you soon.");
-          }}
-          className="flex flex-col gap-6"
-        >
+        <form ref={formRef} onSubmit={sendEmail} className="flex flex-col gap-6">
+
           <label className="flex flex-col text-grey-text font-semibold">
             Name
             <input
