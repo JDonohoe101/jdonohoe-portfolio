@@ -4,12 +4,11 @@ import emailjs from "@emailjs/browser";
 export default function Contact() {
     const formRef = useRef();
 
-  useEffect(() => {
-    // Initialise EmailJS with your public key
-    emailjs.init({
-      publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY, // Replace with your actual public key
-    });
-  }, []);
+    useEffect(() => {
+        emailjs.init({
+          publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+        });
+      }, []);
 
   const sendEmail = (e) => {
     e.preventDefault();
